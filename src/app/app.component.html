@@ -6,23 +6,73 @@
           <form #signUp="ngForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
               <label for="Username">Username</label>
-              <input required minlength="6" name="Username" ngModel #Username="ngModel" type="text" class="form-control">
-              <strong class="text-danger" *ngIf="Username.touched && Username.invalid && Username.hasError('required')">Username is required
-                filed.</strong>
-                 <strong class="text-danger" *ngIf="Username.touched && Username.invalid && Username.hasError('minlength')">minlength of Username should be 6
-          </strong>
+              <input required minlength="12" name="Username" ngModel #Username="ngModel" type="text"
+                class="form-control" pattern="[a-zA-Z0-9._-]{1,}@{1}[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"/>
+
+              <strong class="text-danger" *ngIf="Username.touched && Username.hasError('required')">
+                Username is required filed.</strong>
+                <strong class="text-danger" *ngIf="Username.dirty && Username.hasError('pattern')">
+                please Enter Valid Username
+
+              </strong>
+              <strong class="text-danger" *ngIf="Username.dirty && Username.hasError('minlength')">
+                minlength of Username should be
+                {{Username.errors?.['minlength'].requiredLength}} and actual length is
+
+                {{Username.errors?.['minlength'].actualLength}}
+              </strong>
+            
 
             </div>
 
-              <div class="form-group">
-                <label for="Email">Username</label>
-                <input required name="Email" ngModel #Email="ngModel" type="text" class="form-control">
-                <strong class="text-danger" *ngIf="Email.touched && Email.invalid">Email is required
-                  filed.</strong>
-              </div>
+            <div class="form-group">
+              <label for="Email">Email</label>
+              <input required name="Email" ngModel #Email="ngModel" type="text" class="form-control">
+              <strong class="text-danger" *ngIf="Email.touched && Email.hasError('required')">Email is required
+                filed.</strong>
+              <strong class="text-danger" *ngIf="Email.dirty && Email.hasError('pattern')">Invalid Email & id
+                filed.</strong>
+            </div>
 
-              <button mat-raised-button color="primary" class="btn-block">Sign Up</button>
+            <div class="form-group">
+              <label for="secreatQuestions">Secreat Questions</label>
+              <select required name="secreatQuestions" ngModel #secreatQuestions="ngModel" class="form-control">
+                <option value="favBook">Favourite Book</option>
+                <option value="favSport">Favourite Sports</option>
+              </select>
+              <strong *ngIf="secreatQuestions.touched && secreatQuestions.hasError('required')" class="text-danger">
+                Favourite Questions is required field
+              </strong>
+            </div>
 
+            <div class="form-group">
+              <label for="answer">Answer</label>
+              <textarea required rows="4" class="form-control" id="answer" name="answer" id="answer" ngModel
+                #answer="ngModel">
+
+              </textarea>
+              <strong *ngIf="answer.touched && answer.hasError('required')" class="text-danger">
+                Answer is required field
+              </strong>
+
+            </div>
+
+            <div class="form-group">
+              <label for="isSubScribed">
+                <input type="checkbox" name="isSubScribed" ngModel id="isSubScribed">
+
+                SubScribe for daily emails</label>
+            </div>
+
+            <div class="form-group">
+              <label for="mocPhone">
+                <input type="radio" name="modeofControl" id="mocPhone">
+              contact</label>
+            </div>
+            <button mat-raised-button color="primary" class="btn-block">Sign Up</button>
+
+
+            
           </form>
         </div>
       </div>
