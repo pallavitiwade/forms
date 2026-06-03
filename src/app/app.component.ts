@@ -11,7 +11,6 @@ export class AppComponent {
   @ViewChild('signUp') signUp!:NgForm
 
 
-
    onSubmit(){
   //   if(this.signUp.valid){
   //     return
