@@ -10,6 +10,7 @@ import { StudentRegistrationComponent } from './components/student-registration/
 import { StudentTwoComponent } from './components/student-two/student-two.component';
 import { StudentThreeComponent } from './components/student-three/student-three.component';
 import { StudentFourComponent } from './components/student-four/student-four.component';
+import { StudentFiveComponent } from './components/student-five/student-five.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { StudentFourComponent } from './components/student-four/student-four.com
     StudentRegistrationComponent,
     StudentTwoComponent,
     StudentThreeComponent,
-    StudentFourComponent
+    StudentFourComponent,
+    StudentFiveComponent
   ],
   imports: [
     BrowserModule,
