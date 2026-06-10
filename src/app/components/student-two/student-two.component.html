@@ -71,9 +71,11 @@
                             <input type="checkbox" required name="check" ngModel #check="ngModel">
                            You Must accept Terms & Conditions<br>
                            <strong class="text-danger" *ngIf="check.touched && check.hasError('required')">Terms and conditions is required field</strong> 
-
                         </div>
+                        
                         <button class="btn btn-block btn-warning">Register</button>
+
+
 
                     </form>
                 </div>
