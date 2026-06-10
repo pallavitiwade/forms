@@ -9,6 +9,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { StudentRegistrationComponent } from './components/student-registration/student-registration.component';
 import { StudentTwoComponent } from './components/student-two/student-two.component';
 import { StudentThreeComponent } from './components/student-three/student-three.component';
+import { StudentFourComponent } from './components/student-four/student-four.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { StudentThreeComponent } from './components/student-three/student-three.
     ReactiveFormComponent,
     StudentRegistrationComponent,
     StudentTwoComponent,
-    StudentThreeComponent
+    StudentThreeComponent,
+    StudentFourComponent
   ],
   imports: [
     BrowserModule,
