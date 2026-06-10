@@ -20,8 +20,8 @@
                         <div class="form-group">
                             <label for="form-group">Email*</label>
                             <input required name="Email" ngModel #Email="ngModel" type="text" class="form-control"
-                                pattern="^[a-zA-Z0-9.-]+@[a-zA-Z0-9-.]+\\.[a-zA-Z]{2,100}$">
-                            <strong class="text-danger" *ngIf="Email.touched  && Email.hasError('required') ">Email is
+                                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-z0-9.-]+\.[a-zA-z]{2,}$">
+                            <strong class="text-danger" *ngIf="Email.touched  && Email.hasError('required')">Email is
                                 required field</strong>
 
                             <strong class="text-danger" *ngIf="Email.touched && Email.hasError('pattern')"> Enter Invalid Email 
@@ -31,14 +31,14 @@
 
                         </div>
                         <div class="form-group">
-                            <label for="MobileNUmber">Mobile Number*</label>
+                            <label for="MobileNumber">Mobile Number*</label>
                             <input required name="MobileNumber" ngModel #MobileNumber="ngModel" type="text"
-                                class="form-control" pattern="^[0-9]{10}$">
+                                class="form-control" pattern="^[0-9]{10}$" maxlength="10">
                             <strong class="text-danger"
-                                *ngIf="MobileNumber.touched  && MobileNumber.hasError('required')">Mobile Number is
+                                *ngIf="MobileNumber.touched && MobileNumber.hasError('required')">Mobile Number is
                                 required field</strong>
                            <strong class="text-danger"
-                                *ngIf="MobileNumber.touched  && MobileNumber.hasError('pattern')">Mobile Number must
+                                *ngIf="MobileNumber.dirty && MobileNumber.hasError('pattern')">Mobile Number must
                                 be 10 digit</strong>
 
 
@@ -51,17 +51,17 @@
 
                         </div>
                         <div class="form-group">
-                            <label for="Course">Course</label>
+                            <label for="Course">Course*</label>
                             <select type="text" required name="Course" ngModel #Course="ngModel" class="form-control">
                                 <option value="BBA">BBA</option>
-                                <option value="BCA">BBA</option>
+                                <option value="BCA">BCA</option>
                                 <option value="MCA">MCA</option>
                                 <option value="MBA">MBA</option>
 
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="Address">Address</label>
+                            <label for="Address">Address*</label>
                             <textarea type="text" rows="4" required name="Address" ngModel #Address="ngModel"
                                 class="form-control">
 
@@ -69,9 +69,9 @@
                         </div>
                         <div class="form-group">
                             <input type="checkbox" required name="check" ngModel #check="ngModel">
-                            
-                           You Must accept Terms & Conditions
-                            
+                           You Must accept Terms & Conditions<br>
+                           <strong class="text-danger" *ngIf="check.touched && check.hasError('required')">Terms and conditions is required field</strong> 
+
                         </div>
                         <button class="btn btn-block btn-primary">Register</button>
 
