@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { StudentRegistrationComponent } from './components/student-registration/student-registration.component';
+import { StudentTwoComponent } from './components/student-two/student-two.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { StudentRegistrationComponent } from './components/student-registration/
     AppComponent,
     TemplateFormComponent,
     ReactiveFormComponent,
-    StudentRegistrationComponent
+    StudentRegistrationComponent,
+    StudentTwoComponent
   ],
   imports: [
     BrowserModule,
