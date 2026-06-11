@@ -7,11 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { StudentRegistrationComponent } from './components/student-registration/student-registration.component';
-import { StudentTwoComponent } from './components/student-two/student-two.component';
-import { StudentThreeComponent } from './components/student-three/student-three.component';
-import { StudentFourComponent } from './components/student-four/student-four.component';
-import { StudentFiveComponent } from './components/student-five/student-five.component';
-
+import { EmpLeaveComponent } from './components/emp-leave/emp-leave.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +15,7 @@ import { StudentFiveComponent } from './components/student-five/student-five.com
     TemplateFormComponent,
     ReactiveFormComponent,
     StudentRegistrationComponent,
-    StudentTwoComponent,
-    StudentThreeComponent,
-    StudentFourComponent,
-    StudentFiveComponent
+    EmpLeaveComponent,
   ],
   imports: [
     BrowserModule,

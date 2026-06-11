@@ -83,7 +83,9 @@ this.addDependant()
 
      isAddSome:new FormControl({value:false, disabled:true}),
      skills: new FormArray([]),
-     dependents:new FormArray([])
+     dependents:new FormArray([]),
+     password:new FormControl(null,[Validators.required,Validators.pattern(CustomRegex.password)]),
+    
      
     })
   }
@@ -110,6 +112,7 @@ this.addDependant()
   }
 
   addDependant(){
+    //  if(this.dependsArr.valid && this.dependsArr.length < 3){
     let dependents=new FormGroup({
       fullName:new FormControl(null,Validators.required),
       realtionship:new FormControl(null,Validators.required),
@@ -117,7 +120,13 @@ this.addDependant()
       isTreavelwithYou:new FormControl(true,Validators.required)
      })
      this.dependsArr.push(dependents)
-     
+    }
+
+  //}
+  onDependentRemove(i:number){
+    this.dependsArr.removeAt(i)
+
+
 
   }
   get f(){
