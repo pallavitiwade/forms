@@ -9,6 +9,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { StudentRegistrationComponent } from './components/student-registration/student-registration.component';
 import { EmpLeaveComponent } from './components/emp-leave/emp-leave.component';
 import { LeaveApplicationComponent } from './components/leave-application/leave-application.component';
+import { LeaveThreeComponent } from './components/leave-three/leave-three.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LeaveApplicationComponent } from './components/leave-application/leave-
     StudentRegistrationComponent,
     EmpLeaveComponent,
     LeaveApplicationComponent,
+    LeaveThreeComponent,
   ],
   imports: [
     BrowserModule,
