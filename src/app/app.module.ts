@@ -8,6 +8,7 @@ import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { StudentRegistrationComponent } from './components/student-registration/student-registration.component';
 import { EmpLeaveComponent } from './components/emp-leave/emp-leave.component';
+import { LeaveApplicationComponent } from './components/leave-application/leave-application.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { EmpLeaveComponent } from './components/emp-leave/emp-leave.component';
     ReactiveFormComponent,
     StudentRegistrationComponent,
     EmpLeaveComponent,
+    LeaveApplicationComponent,
   ],
   imports: [
     BrowserModule,
