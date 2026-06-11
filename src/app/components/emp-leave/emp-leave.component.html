@@ -6,7 +6,7 @@
                 <h4 class="text-center">Leave Application</h4>
                 <form #leave="ngForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
-                        <label for="Employee">Employee Name"</label>
+                        <label for="Employee">Employee Name*</label>
                         <input required name="Employee" ngModel #Employee="ngModel" type="text" class="form-control"
                         pattern="[A-Za-z]+$">
                         <strong class="text-danger" *ngIf="Employee.touched && Employee.hasError('required')">
