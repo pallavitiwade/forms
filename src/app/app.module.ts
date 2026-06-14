@@ -10,6 +10,9 @@ import { StudentRegistrationComponent } from './components/student-registration/
 import { EmpLeaveComponent } from './components/emp-leave/emp-leave.component';
 import { LeaveApplicationComponent } from './components/leave-application/leave-application.component';
 import { LeaveThreeComponent } from './components/leave-three/leave-three.component';
+import { LeaveFourComponent } from './components/leave-four/leave-four.component';
+import { LeaveFiveComponent } from './components/leave-five/leave-five.component';
+import { JobApplicationComponent } from './components/job-application/job-application.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { LeaveThreeComponent } from './components/leave-three/leave-three.compon
     EmpLeaveComponent,
     LeaveApplicationComponent,
     LeaveThreeComponent,
+    LeaveFourComponent,
+    LeaveFiveComponent,
+    JobApplicationComponent,
   ],
   imports: [
     BrowserModule,
