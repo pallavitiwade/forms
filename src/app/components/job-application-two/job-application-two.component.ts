@@ -13,7 +13,7 @@ Skills={
   Html:false,
   css:false,
   Javascript:false,
-typescript:false
+Angular:false
 }
 skillsubmit():boolean{
   return Object.values(this.Skills).some(skill=>skill)
