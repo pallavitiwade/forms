@@ -37,6 +37,7 @@ export class JobApplicationFourComponent {
     }
     this.jobFour.reset
   
+    
   }
   
   
