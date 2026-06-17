@@ -9,9 +9,6 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { StudentRegistrationComponent } from './components/student-registration/student-registration.component';
 import { EmpLeaveComponent } from './components/emp-leave/emp-leave.component';
 import { JobApplicationComponent } from './components/job-application/job-application.component';
-import { JobApplicationTwoComponent } from './components/job-application-two/job-application-two.component';
-import { JobApplicationThreeComponent } from './components/job-application-three/job-application-three.component';
-import { JobApplicationFourComponent } from './components/job-application-four/job-application-four.component';
 import { JobApplicationFiveComponent } from './components/job-application-five/job-application-five.component';
 
 @NgModule({
@@ -22,9 +19,6 @@ import { JobApplicationFiveComponent } from './components/job-application-five/j
     StudentRegistrationComponent,
     EmpLeaveComponent,
     JobApplicationComponent,
-    JobApplicationTwoComponent,
-    JobApplicationThreeComponent,
-    JobApplicationFourComponent,
     JobApplicationFiveComponent,
   ],
   imports: [
