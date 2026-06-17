@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,24 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'td-forms';
+//   title = 'td-forms';
+//   name='pallavi';
+//  imageUrl='https://toppng.com/public/uploads/preview/angular-logo-11609355165bd2msuomqq.png'
+
+// islogin=false;
+// role='user'
+
+// countryarr=['india','usa','china']
+// nameone='angular dev'
+
+//  username=''
+//  showmessage(){
+// alert('button clicked')
+
+
+//  }
+//  today=new Date()
+
+
  
 }
