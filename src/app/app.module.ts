@@ -10,6 +10,7 @@ import { StudentRegistrationComponent } from './components/student-registration/
 import { EmpLeaveComponent } from './components/emp-leave/emp-leave.component';
 import { JobApplicationComponent } from './components/job-application/job-application.component';
 import { LoanTwoComponent } from './components/loan-two/loan-two.component';
+import { LoanThreeComponent } from './components/loan-three/loan-three.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LoanTwoComponent } from './components/loan-two/loan-two.component';
     EmpLeaveComponent,
     JobApplicationComponent,
     LoanTwoComponent,
+    LoanThreeComponent,
   ],
   imports: [
     BrowserModule,
