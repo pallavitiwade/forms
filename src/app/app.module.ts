@@ -9,7 +9,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { StudentRegistrationComponent } from './components/student-registration/student-registration.component';
 import { EmpLeaveComponent } from './components/emp-leave/emp-leave.component';
 import { JobApplicationComponent } from './components/job-application/job-application.component';
-import { LoanOneComponent } from './components/loan-one/loan-one.component';
+import { LoanTwoComponent } from './components/loan-two/loan-two.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { LoanOneComponent } from './components/loan-one/loan-one.component';
     StudentRegistrationComponent,
     EmpLeaveComponent,
     JobApplicationComponent,
-    LoanOneComponent,
+    LoanTwoComponent,
   ],
   imports: [
     BrowserModule,
