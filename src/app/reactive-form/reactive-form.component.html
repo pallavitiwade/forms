@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
+                <h4 class="text-center mt-3">Reactive Form</h4>
                 <div class="card-body">
                     <form (ngSubmit)="onSignUp()" [formGroup]="onSignUpForm">
                         <div class="form-group">
@@ -132,7 +133,7 @@
                             <div class="row" *ngFor="let skill of skillsArr.controls; let i=index">
                                 <div class="col-10">
                                     <div class="form-group">
-                                        <input type="text" [formControlName]="i" class="form-control"/>
+                                        <input type="text" [formControlName]="i" class="form-control" />
                                     </div>
                                 </div>
                                 <div class="col-2 p-0" *ngIf="i > 0">
@@ -143,10 +144,8 @@
                             <div class="row mb-4">
                                 <div class="col">
 
-                                    <button 
-                                    *ngIf="skillsArr.length < 5"
-                                    (click)="onSkillAdd()"
-                                    class="btn btn-sm btn-outline-primary">Add skill</button>
+                                    <button *ngIf="skillsArr.length < 5" (click)="onSkillAdd()"
+                                        class="btn btn-sm btn-outline-primary">Add skill</button>
                                 </div>
                             </div>
 
@@ -177,7 +176,8 @@
                                 </div>
                                 <div class="col">
                                     <label [for]="'isTreavelwithYou'+i">IsTreavelwithYou</label>
-                                    <select type="text"  formControlName="isTreavelwithYou" [id]="'isTreavelwithYou'+i" class="form-control">
+                                    <select type="text" formControlName="isTreavelwithYou" [id]="'isTreavelwithYou'+i"
+                                        class="form-control">
                                         <option [ngValue]="true">yes</option>
                                         <option [ngValue]="false">No</option>
                                     </select>
@@ -185,23 +185,20 @@
                                 <div class="col align-self-center">
                                     <label for="remove" style="opacity:0">Remove</label>
                                     <br>
-                                    <button
-                                    (click)="onDependentRemove(i)"
-                                     *ngIf="i > 0" type="button" class="btn btn-sm btn-outline-danger">Remove</button>
-                                
+                                    <button (click)="onDependentRemove(i)" *ngIf="i > 0" type="button"
+                                        class="btn btn-sm btn-outline-danger">Remove</button>
+
                                 </div>
                             </div>
-                            
+
 
                             <div class="row mb-4">
                                 <div class="col">
-                                   
-                                   <!-- *ngIf="dependsArr.length < 3;else dependslimitExid"
+
+                                    <!-- *ngIf="dependsArr.length < 3;else dependslimitExid"
                                    [disabled]="dependsArr.invalid" -->
-                                    <button
-                                     (click)="addDependant()"
-                                    type="button" 
-                                    class="btn btn-sm btn-outline-primary">Add Dependent</button>
+                                    <button (click)="addDependant()" type="button"
+                                        class="btn btn-sm btn-outline-primary">Add Dependent</button>
                                     <ng-template #dependslimitExid>
                                         <p class="alert alert-info">
                                             you can add 3 dependents only!!
@@ -210,28 +207,38 @@
 
                                 </div>
                             </div>
-               
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input formControlName="password"
-                                         type="text" id="password" class="form-control"/>
 
-                                      <strong class="text-danger" *ngIf="f['password'].touched && f['password'].hasError('required')">
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input formControlName="password" type="text" id="password" class="form-control" />
+
+                                    <strong class="text-danger"
+                                        *ngIf="f['password'].touched && f['password'].hasError('required')">
                                         Password is a required field
-                                      </strong>
-                                      <strong 
-                                      *ngIf="f['password'].dirty && f['password'].hasError('pattern')"
-                                      class="text-danger">
-                                        Invalid password (length of password should be 8,It must contain one Uppercase,one lowecase, one number and spec charcter)
-                                      </strong>
-                                    </div>
+                                    </strong>
+                                    <strong *ngIf="f['password'].dirty && f['password'].hasError('pattern')"
+                                        class="text-danger">
+                                        Invalid password (length of password should be 8,It must contain one
+                                        Uppercase,one lowecase, one number and spec charcter)
+                                    </strong>
                                 </div>
                             </div>
 
-                            <button class="btn btn-primary btn-block">Sign Up</button>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input formControlName="confirmPassword" type="text" id="confirmPassword"
+                                        class="form-control" />
+                                    <strong class="text-danger"
+                                        *ngIf="f['confirmPassword'].hasError('passMissMatch') && f['confirmPassword'].dirty">{{f['confirmPassword'].errors?.['passMissMatch']}}</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-block">Sign Up</button>
+                        <button onclick="onEdit()" class="btn btn-primary btn-block">Edit</button>
                     </form>
                 </div>
 
