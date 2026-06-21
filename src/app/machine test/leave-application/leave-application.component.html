@@ -1,0 +1,60 @@
+<div class="container mt-5">
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="text-center text-success">Employee Leave Application</h4>
+                <form #empleave="ngForm" (ngSubmit)="onSubmittwo()">
+                    <div class="form-group">
+                        <label for="Employee">Employee Name*</label>
+                        <input type="text" required name="Employee" ngModel #Employee="ngModel" class="form-control"> 
+                        <strong class="text-danger" *ngIf="Employee.touched && Employee.hasError('required')">Employee Name is required Field</strong>
+
+                    </div>
+                     <div class="form-group">
+                        <label for="Employeeid">Employee ID*</label>
+                        <input type="text" required name="Employeeid" ngModel #Employeeid="ngModel" class="form-control"> 
+                        <strong class="text-danger" *ngIf="Employeeid.touched && Employeeid.hasError('required')">Employee ID is required Field</strong>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="LeaveType">Leave Type*</label>
+                        <select type="text" required name="LeaveType" ngModel #LeaveType="ngModel" class="form-control"> 
+                            <option value="Sick Leave">Sick Leave</option>
+                            <option value="Emergency Leave">Emergency Leave</option>
+                            <option value="Casual Leave">Casual Leave</option>
+                            <option value="Maternity Leave">Maternity Leave</option>
+                            <option value="Study Leave">Study Leave</option>
+                            <option value="Marriage Leave">Marriage Leave</option>
+
+                            </select>
+                     <strong class="text-danger" *ngIf="LeaveType.touched && LeaveType.hasError('required')">Leave Type is required Field</strong>
+
+                    </div>
+                   <div class="form-group">
+                     <label for="fromDate">From Date*</label>
+                     <input type="date" [(ngModel)]="FromValue" required name="fromDate" ngModel #fromDate="ngModel" class="form-control">
+                         <strong class="text-danger" *ngIf="fromDate.touched && fromDate.hasError('required')">from Date is required Field</strong>
+
+                   </div>
+
+                    <div class="form-group">
+                     <label for="ToDate">To Date*</label>
+                     <input type="date" [(ngModel)]="FromValue" required name="ToDate" ngModel #ToDate="ngModel" class="form-control">
+                      <strong class="text-danger" *ngIf="ToDate.touched && ToDate.hasError('required')">To Date required Field</strong>
+                   </div>
+                   <div class="form-group">
+                    <label for="Reason">Reason</label>
+                    <textarea type="text" rows="4"  required name="Reason" ngModel #Reason="ngModel" class="form-control" minlength="40">
+                    </textarea>
+                    <strong class="text-danger" *ngIf="Reason.touched && Reason.hasError('required')">Reason is required Field</strong>
+                    <strong class="text-danger" *ngIf="Reason.dirty && Reason.hasError('minlength')">Reason is Must be Fourty character</strong>
+                   </div>
+                   <button class="btn btn-block btn-success">Apply</button>
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

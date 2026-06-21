@@ -1,0 +1,89 @@
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="text-center">Job Application</h4>
+                    <form #Job="ngForm" (ngSubmit)="onSubmitthree()">
+                        <div class="form-group">
+                            <label for="fullname">fullName*</label>
+                            <input type="text" required name="fullname" ngModel #fullname="ngModel" class="form-control">
+                            <strong class="text-danger" *ngIf="fullname.touched && fullname.hasError('required')">
+                                fullName is required Field
+                            </strong>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="text" required name="email" ngModel #email="ngModel" class="form-control">
+                            <strong class="text-danger" *ngIf="email.touched && email.hasError('required')">
+                                Email required Field
+                            </strong>
+                        </div>
+                         <div class="form-group">
+                            <label for="number">Mobile Number*</label>
+                            <input type="text" required name="number" ngModel #number="ngModel" class="form-control">
+                            <strong class="text-danger" *ngIf="number.touched && number.hasError('required')">
+                               Mobile Number is required Field
+                            </strong>
+                        </div>
+                         <div class="form-group">
+                            <label for="Experience">Experience*</label>
+                            <select type="text" required name="Experience" ngModel #Experience="ngModel" class="form-control">
+                                <option value="0-1">0-1</option>
+                                <option value="1-2">1-2</option>
+                                <option value="2-3">2-3</option>
+                                <option value="3-4">3-4</option>
+                                </select>
+                            <strong class="text-danger" *ngIf="Experience.touched && Experience.hasError('required')">
+                                Experience is required Field
+                            </strong>
+                        </div>
+                          <div class="form-group">
+                            <label for="skills">Skills*</label><br>
+                            <div class="form-check form-check-inline">
+                                <input id="Html" class="form-check.input" type="checkbox" name="Html" #Html="ngModel" ngModel [(ngModel)]="skills.Html" required>
+                                <label for="Html" class="form-check.label">Html</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input id="css" class="form-check.input" type="checkbox" name="css" #css="ngModel" ngModel [(ngModel)]="skills.css" required>
+                                <label for="css" class="form-check.label">CSS</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input id="javascript" class="form-check.input" type="checkbox" name="javascript" #javascript="ngModel" ngModel [(ngModel)]="skills.javascript" required>
+                                <label for="javascript" class="form-check.label">javascript</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input id="Angular" class="form-check.input" type="checkbox" name="Angular" #Angular="ngModel" ngModel [(ngModel)]="skills.Angular" required>
+                                <label for="Html" class="form-check.label">Angular</label>
+                            </div>
+
+                            </div>
+                         <div class="form-group">
+                          <label for="Url">Resume Url*</label>
+                             <input type="Url" required name="Url" ngModel #Url="ngModel" class="form-control" pattern="https?://.+">
+                            <strong class="text-danger" *ngIf="Url.touched && Url.hasError('required')">
+                                Resume Url is required Field
+                            </strong>
+                              <strong class="text-danger" *ngIf="Url.dirty && Url.hasError('pattern')">
+                                Enter a valid Resume Url is required Field
+                            </strong>
+                         </div>
+                            <div class="form-group">
+                            <label for="salary">Expected Salary*</label>
+                            <input type="number" required name="salary" ngModel #salary="ngModel" class="form-control" min="10000">
+                            <strong class="text-danger" *ngIf="salary.touched && salary.hasError('required')">
+                                Expected salary is required Field
+                            </strong>
+                              <strong class="text-danger" *ngIf="salary.dirty && salary.hasError('min')">
+                                salary must greater than ten thousand 
+                            </strong>
+                        </div>
+                        <button class="btn btn-block bg-primary text-light">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

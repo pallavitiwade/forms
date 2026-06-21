@@ -11,6 +11,11 @@ import { EmpLeaveComponent } from './components/emp-leave/emp-leave.component';
 import { JobApplicationComponent } from './components/job-application/job-application.component';
 import { LoanTwoComponent } from './components/loan-two/loan-two.component';
 import { ProductReviewComponent } from './components/product-review/product-review.component';
+import { StdRegistrationComponent } from './machine test/std-registration/std-registration.component';
+import { LeaveApplicationComponent } from './machine test/leave-application/leave-application.component';
+import { JobAppComponent } from './machine test/job-app/job-app.component';
+import { LoanComponent } from './machine test/loan/loan.component';
+import { ProductComponent } from './machine test/product/product.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +27,11 @@ import { ProductReviewComponent } from './components/product-review/product-revi
     JobApplicationComponent,
     LoanTwoComponent,
     ProductReviewComponent,
+    StdRegistrationComponent,
+    LeaveApplicationComponent,
+    JobAppComponent,
+    LoanComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

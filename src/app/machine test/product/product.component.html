@@ -1,0 +1,49 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="text-center text-primary">Product Review</h4>
+                    <form #product="ngForm" (ngSubmit)="onsubmitFive()">
+                        <div class="form-group">
+                        <label for="Customer">Customer Name*</label>
+                        <input type="text" required name="Customer" ngModel #Customer="ngModel" class="form-control">
+                        <strong class="text-danger" *ngIf="Customer.touched && Customer.hasError('required')">Customer Name is required Field</strong>
+                        </div>
+                         <div class="form-group">
+                        <label for="Pro">Product Name*</label>
+                        <input type="text" required name="Pro" ngModel #Pro="ngModel" class="form-control">
+                        <strong class="text-danger" *ngIf="Pro.touched && Pro.hasError('required')">product Name is required Field</strong>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rating*</label><br>
+                            <input type="checkbox" name="rating" value="1" [(ngModel)]="user.rating">1
+                             <input type="checkbox" name="rating" value="2" [(ngModel)]="user.rating">2
+                            <input type="checkbox" name="rating" value="3" [(ngModel)]="user.rating">3
+                            <input type="checkbox" name="rating" value="4" [(ngModel)]="user.rating">4
+                            <input type="checkbox" name="rating" value="5" [(ngModel)]="user.rating">5
+
+
+                        </div>
+                        <div class="form-group">
+                         <label for="review">Review*</label>
+                        <input type="text" required name="review" ngModel #review="ngModel" class="form-control" minlength="5">
+                        <strong class="text-danger" *ngIf="review.touched && review.hasError('required')">Review is required Field</strong>
+                        <strong class="text-danger" *ngIf="review.dirty && review.hasError('minlength')">Review Must be five character</strong>
+
+                        </div>
+                        <div class="form-group">
+                         <label for="Pro">Review Description*</label>
+                        <textarea type="text" rows="4" required name="reviews" ngModel #reviews="ngModel" class="form-control" minlength="30"></textarea>
+                        <strong class="text-danger" *ngIf="reviews.touched && reviews.hasError('required')">Review Description is required Field</strong>
+                         <strong class="text-danger" *ngIf="reviews.dirty && reviews.hasError('minlength')">Review Description Must be thirty character</strong>
+
+                        </div>
+
+                     <button class="btn btn-block bg-primary text-light">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

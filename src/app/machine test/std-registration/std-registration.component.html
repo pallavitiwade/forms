@@ -1,0 +1,85 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="text-center">Student Registration</h4>
+                    <form #std="ngForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="fullName">FullName*</label>
+                            <input type="text" required #fullName="ngModel" ngModel name="fullName"
+                                class="form-control">
+                                <strong class="text-danger" *ngIf="fullName.touched && fullName.hasError('required')">
+                                    FullName is required Field</strong>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email*</label>
+                            <input type="text" required #Email="ngModel" ngModel name="Email" class="form-control"
+                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-z0-9.-]+\.[a-zA-z]{2,}$">
+                            <strong class="text-danger" *ngIf="Email.touched && Email.hasError('required')">
+                                    Email is required Field</strong>
+
+                                    <strong class="text-danger" *ngIf="Email.dirty && Email.hasError('pattern')">
+                                   please Enter A valid Email </strong>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="mobilenumber">MobileNumber*</label>
+                            <input type="text" required #mobilenumber="ngModel" ngModel name="mobilenumber"
+                                class="form-control" pattern="^[0-9]{10}$" maxlength="10">
+                                 <strong class="text-danger" *ngIf="mobilenumber.touched && mobilenumber.hasError('required')">
+                                   Mobile Number is required Field</strong>
+                                   <strong class="text-danger" *ngIf="mobilenumber.dirty && mobilenumber.hasError('pattern')">
+                                   Mobile Number Must be ten digit</strong>
+
+                        </div>
+                        <div class="form-group">
+                            Gender*
+                            <br>
+                            <label *ngFor="let g of gender" [for]="g.gen" class="mr-2">
+                                <input required type="radio" [value]="g.gen" ngModel name="gender" [id]="g.gen">
+                                {{g.gen}}
+                            </label>
+                           
+
+                        </div>
+                        <div class="form-group">
+
+                            <label for="course">Course*</label>
+                            <select type="text" required #course="ngModel" ngModel name="course" class="form-control">
+                                <option value="java Developer">java Developer</option>
+                                <option value="Full Developer">Full Developer</option>
+                                <option value="React Developer">React Developer</option>
+                                <option value="Angular Developer">Angular Developer</option>
+                            </select>
+                          <strong class="text-danger" *ngIf="course.touched && course.hasError('required')">
+                                   Course is required Field</strong>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address*</label>
+                            <textarea type="text" rows="4" required name="address" ngModel #address="ngModel"
+                                class="form-control">
+
+                                    </textarea>
+                                     <strong class="text-danger" *ngIf="address.touched && address.hasError('required')">
+                                 Address is required Field</strong>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" required #check="ngModel" ngModel name="check">
+
+                            You Must accept Terms & Conditions
+                            <br>
+                            <strong class="text-danger" *ngIf="check.touched && check.hasError('required')">
+                                Terms & conditions is required Field
+                            </strong>
+
+                        </div>
+                        <button class="btn btn-block btn-primary">Register</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

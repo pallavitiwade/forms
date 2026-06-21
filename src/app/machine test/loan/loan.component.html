@@ -1,0 +1,58 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="text-center text-danger">Loan Application</h4>
+                    <form #loan="ngForm" (ngSubmit)="onSubmitFour()">
+                        <div class="form-group">
+                            <label for="applicantname">Applicant Name*</label>
+                            <input type="text" required name="applicantname" #applicantname="ngModel" ngModel class="form-control">
+                            <strong class="text-danger" *ngIf="applicantname.touched && applicantname.hasError('required')">Applicant Name is required Field</strong>
+                        </div>
+                         <div class="form-group">
+                            <label for="Email">Email*</label>
+                            <input type="text" required name="Email" #Email="ngModel" ngModel class="form-control">
+                            <strong class="text-danger" *ngIf="Email.touched && Email.hasError('required')">Email is required Field</strong>
+                        </div>
+                          <div class="form-group">
+                            <label for="Mobile">Mobile Number*</label>
+                            <input type="text" required name="Mobile" #Mobile="ngModel" ngModel class="form-control">
+                            <strong class="text-danger" *ngIf="Mobile.touched && Mobile.hasError('required')">Mobile Number is required Field</strong>
+                        </div>
+                         <div class="form-group">
+                            <label for="pan">PAN Number*</label>
+                            <input type="text" required name="pan" #pan="ngModel" ngModel class="form-control" pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$">
+                            <strong class="text-danger" *ngIf="pan.touched && pan.hasError('required')">PAN Number is required Field</strong>
+                            <strong class="text-danger" *ngIf="pan.dirty && pan.hasError('pattern')"> Enter a Valid PAN Number</strong>
+
+                        </div>
+                         <div class="form-group">
+                            <label for="Aadhar">Aadhar Number*</label>
+                            <input type="text" required name="Aadhar" #Aadhar="ngModel" ngModel class="form-control" pattern="^[0-9]{12}$" maxlength="12">
+                            <strong class="text-danger" *ngIf="Aadhar.touched && Aadhar.hasError('required')">Aadhar Number is required Field</strong>
+                            <strong class="text-danger" *ngIf="Aadhar.dirty && Aadhar.hasError('pattern')">Aadhar Number Must be 12 digit</strong>
+
+                        </div>
+                         <div class="form-group">
+                            <label for="Annual">Annual Income*</label>
+                            <input type="text" required name="Annual" #Annual="ngModel" ngModel class="form-control">
+                            <strong class="text-danger" *ngIf="Annual.touched && Annual.hasError('required')">Annual Income is required Field</strong>
+                        </div>
+                         <div class="form-group">
+                            <label for="loan">Loan Amount*</label>
+                            <input type="number" required name="loan" #loan="ngModel" ngModel class="form-control" min="500000">
+                            <strong class="text-danger" *ngIf="loan.touched && loan.hasError('required')">
+                                Loan Amount is required Field</strong>
+                            <strong class="text-danger" *ngIf="loan.touched && loan.hasError('min')">
+                                Loan Amount is greater than Five lakhs</strong>
+
+                        </div>
+
+                         <button class="btn btn-block bg-danger text-light">Apply Loan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
