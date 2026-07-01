@@ -3,8 +3,8 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="text-center text-danger">Product Review</h4>
-                    <form #productthree="ngForm" (ngSubmit)="onSubmithree()">
+                    <h4 class="text-center text-warning">Product Review</h4>
+                    <form #productfour="ngForm" (ngSubmit)="onSubmitfour()">
                         <div class="form-group">
                             <label for="CustomerName">Customer Name*</label>
                             <input type="text" ngModel #CustomerName="ngModel" name="CustomerName" required class="form-control">
@@ -47,7 +47,7 @@
                                 and actual length is {{reviewDescription.errors?.['minlength'].actualLength}}
                             </strong>
                         </div>
-                        <button class="btn btn-block bg-danger text-light"> Submit Review</button>
+                        <button class="btn btn-block text-dark bg-warning"> Submit Review</button>
                     </form>
                 </div>
             </div>
