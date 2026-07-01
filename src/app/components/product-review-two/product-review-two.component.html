@@ -1,0 +1,56 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="text-center">Product Review</h4>
+                    <form #productwo="ngForm" (ngSubmit)="onSubmittwo()">
+                        <div class="form-group">
+                            <label for="CustomerName">Customer Name*</label>
+                            <input type="text" ngModel #CustomerName="ngModel" name="CustomerName" required class="form-control">
+                            <strong class="text-danger" *ngIf="CustomerName.touched && CustomerName.hasError('required')">Customer Name is required field</strong>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="productname">Product Name*</label>
+                            <input type="text" ngModel #productname="ngModel" name="productname" required class="form-control">
+                            <strong class="text-danger" *ngIf="productname.touched && productname.hasError('required')">Product Name is required field</strong>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rating*</label>
+                            <select required ngModel #rating="ngModel" name="rating" type="text" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewTitle">Review Title*</label>
+                            <input type="text"  minlength="5" ngModel #reviewTitle="ngModel" name="reviewTitle" required class="form-control">
+                            <strong class="text-danger" *ngIf="reviewTitle.touched && reviewTitle.hasError('required')">Review Title is a required field</strong>
+                             <strong class="text-danger" *ngIf="reviewTitle.dirty && reviewTitle.hasError('minlength')">
+                                the Minimum length of review Title should be {{reviewTitle.errors?.['minlength'].requiredLength}}
+                                and actual length is {{reviewTitle.errors?.['minlength'].actualLength}}
+                             </strong>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewDescription">Review Description*</label>
+                            <textarea rows="4" minlength="30" #reviewDescription="ngModel" ngModel name="reviewDescription" required class="form-control"></textarea>
+                            <strong class="text-danger" *ngIf="reviewDescription.touched && reviewDescription.hasError('required')">Review Description is a required field</strong>
+
+                            <strong class="text-danger" *ngIf="reviewDescription.dirty && reviewDescription.hasError('minlength')">
+                                The Minimum length  of Review Description should be {{reviewDescription.errors?.['minlength'].requiredLength}} 
+                                and actual length is {{reviewDescription.errors?.['minlength'].actualLength}}
+                            </strong>
+                        </div>
+                        <button class="btn btn-block bg-primary text-light"> Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

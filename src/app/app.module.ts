@@ -16,6 +16,8 @@ import { LeaveApplicationComponent } from './machine test/leave-application/leav
 import { JobAppComponent } from './machine test/job-app/job-app.component';
 import { LoanComponent } from './machine test/loan/loan.component';
 import { ProductComponent } from './machine test/product/product.component';
+import { UserRegistrationComponent } from './reactive task/user-registration/user-registration.component';
+import { ProductReviewTwoComponent } from './components/product-review-two/product-review-two.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ProductComponent } from './machine test/product/product.component';
     JobAppComponent,
     LoanComponent,
     ProductComponent,
+    UserRegistrationComponent,
+    ProductReviewTwoComponent,
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,20 @@ export class ReactiveFormComponent implements OnInit {
 
   userDetails={
     
+confirmPassword: "zaq1ZAQ!",
+currentAddress: 
+{country: 'Aland', state: 'Maharashtra', city: 'nanded', pincode: '431136'},
+email:"tiwdepallavi97@gmail.com",
+empId: "A123",
+gender:"Female",
+isAddSome:true,
+password:"zaq1ZAQ!",
+permanentAddress: 
+{country: 'Aland', state: 'Maharashtra', city: 'nanded', pincode: '431136'},
+skills:['htmll', 'java'],
+userName:"pallavi"
+
+    
   }
   constructor() {
 
@@ -45,16 +59,14 @@ export class ReactiveFormComponent implements OnInit {
       })
 
   }
-  // onEdit(){
-  //   this.onSignUpForm.patchValue(this.userDetails)
-  //   this.skillsArr.clear()
-  //   this.userDetails.skills.forEach(skill=>{
-  //     console.log(`patch the skill ${skill} in control in side skills FormArray !!!`)
-  //     let control=new FormControl(skill)
-  //     this.skillsArr.push(control)
+ onEdit(){
+    this.onSignUpForm.patchValue(this.userDetails)
+    this.userDetails.skills.forEach(skill=>{
+   let control=new FormControl(skill)
+      this.skillsArr.push(control)
 
-  //   })
-  // }
+    })
+   }
 
 
 
